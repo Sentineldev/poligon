@@ -44,8 +44,8 @@ def dibujar_etiquetas(lados,canvas):
     radio = 170
     centro = (210,200)
     for i in range(lados):
-        x = round(radio*math.cos(math.pi/180*grados)+centro[0]) #COordenadas de las etiquetas
-        y = round(radio*math.sin(math.pi/180*grados)+centro[1]) #calculo en coordenadas cuadradas de los vertices
+        x = round(radio*math.cos(math.pi/180*grados-math.pi/2)+centro[0]) #COordenadas de las etiquetas
+        y = round(radio*math.sin(math.pi/180*grados-math.pi/2)+centro[1]) #calculo en coordenadas cuadradas de los vertices
         grados+=360/lados  #calculo de los grados
         canvas.create_text(x,y,text=str(i+1),tags='texto') #identificador de la etiqueta text
 def dibujar_vertice(vertices,canvas):
